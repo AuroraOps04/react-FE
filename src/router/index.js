@@ -3,6 +3,7 @@ import NotFound from "../components/NotFound";
 import Layout from "../layout";
 import User from "../pages/User";
 import Dashboard from "@pages/Dashboard";
+import {DashboardOutlined, TeamOutlined} from "@ant-design/icons"
 
 export const globalRouter = [
     {
@@ -25,12 +26,21 @@ export const adminRouter = [
     {
         name: "Dashboard",
         path: "/admin/dashboard",
-        component: Dashboard
+        component: Dashboard,
+        icon: DashboardOutlined
     },
     {
-        name: "User",
+        name: "权限管理",
         path: "/admin/user",
-        component: User
+        icon: TeamOutlined,
+        children: [
+            {
+                name: "用户管理",
+                path: "/admin/user/manager",
+                component: User,
+                icon: TeamOutlined
+            }
+        ]
     },
 
 ]

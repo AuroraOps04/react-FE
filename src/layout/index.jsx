@@ -8,19 +8,26 @@ import styles from "./index.module.less"
 function Layout(props) {
     return (
         <Fragment>
-            <Aside />
+            <Aside/>
             <div className={styles.AppMain}>
                 <Switch>
                     {adminRouter.map(route => {
-                        const Component = route.component
+                        const routes = route.children
                         return (
-                            <FancyRoute key={route.path} path={route.path}>
-                                <Component />
+                            routes ? routes.map(childRoute =>
+                                (
+                                    <FancyRoute key={childRoute.path} path={childRoute.path}>
+                                        <childRoute.component/>
+                                    </FancyRoute>
+                                )
+                            ) : <FancyRoute key={route.path} path={route.path}>
+                                <route.component/>
                             </FancyRoute>
+
                         )
                     })}
-                    <Redirect from="/admin" exact to="/admin/dashboard" />
-                    <Redirect to="/404" />
+                    <Redirect from="/admin" exact to="/admin/dashboard"/>
+                    <Redirect to="/404"/>
                 </Switch>
             </div>
         </Fragment>

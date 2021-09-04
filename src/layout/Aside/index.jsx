@@ -25,16 +25,16 @@ function Aside(props) {
                 {adminRouter.map(route => {
                     if (route.children) {
                         return (
-                            <SubMenu key={route.path}>
+                            <SubMenu key={route.path} icon={<route.icon />} title={route.name}>
                                 {
-                                    route.children.map(childRoute => <Item key={childRoute.path}>
+                                    route.children.map(childRoute => <Item key={childRoute.path} icon={<childRoute.icon />}>
                                         {childRoute.name}
                                     </Item>)
                                 }
                             </SubMenu>
                         )
                     } else {
-                        return <Item key={route.path}>
+                        return <Item key={route.path} icon={<route.icon />}>
                             {route.name}
                         </Item>
                     }
