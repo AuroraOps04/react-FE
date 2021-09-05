@@ -3284,6 +3284,11 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
+chain-function@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/chain-function/download/chain-function-1.0.1.tgz#c63045e5b4b663fb86f1c6e186adaf1de402a1cc"
+  integrity sha1-xjBF5bS2Y/uG8cbhhq2vHeQCocw=
+
 chalk@2.4.2, chalk@^2.0.0, chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
@@ -3525,7 +3530,7 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.20.0:
+commander@2, commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -4075,6 +4080,16 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
+d3-array@^1.2.0:
+  version "1.2.4"
+  resolved "https://registry.nlark.com/d3-array/download/d3-array-1.2.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fd3-array%2Fdownload%2Fd3-array-1.2.4.tgz#635ce4d5eea759f6f605863dbcfc30edc737f71f"
+  integrity sha1-Y1zk1e6nWfb2BYY9vPww7cc39x8=
+
+d3-polygon@^1.0.3:
+  version "1.0.6"
+  resolved "https://registry.nlark.com/d3-polygon/download/d3-polygon-1.0.6.tgz#0bf8cb8180a6dc107f518ddf7975e12abbfbd38e"
+  integrity sha1-C/jLgYCm3BB/UY3feXXhKrv7044=
+
 d@1, d@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/d/-/d-1.0.1.tgz#8698095372d58dbee346ffd0c7093f99f8f9eb5a"
@@ -4353,6 +4368,13 @@ dom-converter@^0.2:
   dependencies:
     utila "~0.4"
 
+dom-helpers@^3.2.0:
+  version "3.4.0"
+  resolved "https://registry.nlark.com/dom-helpers/download/dom-helpers-3.4.0.tgz#e9b369700f959f62ecde5a6babde4bccd9169af8"
+  integrity sha1-6bNpcA+Vn2Ls3lprq95LzNkWmvg=
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+
 dom-serializer@0:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-0.2.2.tgz#1afb81f533717175d478655debc5e332d9f9bb51"
@@ -4437,6 +4459,11 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
+
+earcut@^2.1.1:
+  version "2.2.3"
+  resolved "https://registry.nlark.com/earcut/download/earcut-2.2.3.tgz?cache=0&sync_timestamp=1625748432796&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fearcut%2Fdownload%2Fearcut-2.2.3.tgz#d44ced2ff5a18859568e327dd9c7d46b16f55cf4"
+  integrity sha1-1EztL/WhiFlWjjJ92cfUaxb1XPQ=
 
 ecc-jsbn@~0.1.1:
   version "0.1.2"
@@ -5255,6 +5282,18 @@ flatten@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.3.tgz#c1283ac9f27b368abc1e36d1ff7b04501a30356b"
   integrity sha512-dVsPA/UwQ8+2uoFe5GHtiBMu48dWLTdsuEd7CKGlZlD78r1TTWBvDuFaFGKCo/ZfEr95Uk56vZoX86OsHkUeIg==
+
+flubber@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.nlark.com/flubber/download/flubber-0.4.2.tgz#14452d4a838cc3b9f2fb6175da94e35acd55fbaa"
+  integrity sha1-FEUtSoOMw7ny+2F12pTjWs1V+6o=
+  dependencies:
+    d3-array "^1.2.0"
+    d3-polygon "^1.0.3"
+    earcut "^2.1.1"
+    svg-path-properties "^0.2.1"
+    svgpath "^2.2.1"
+    topojson-client "^3.0.0"
 
 flush-write-stream@^1.0.0:
   version "1.1.1"
@@ -9196,10 +9235,10 @@ prompts@2.4.0, prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
-  integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
+  resolved "https://registry.nlark.com/prop-types/download/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
+  integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
   dependencies:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"
@@ -9542,6 +9581,14 @@ rc-progress@~3.1.0:
     "@babel/runtime" "^7.10.1"
     classnames "^2.2.6"
 
+rc-queue-anim@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.nlark.com/rc-queue-anim/download/rc-queue-anim-2.0.0.tgz?cache=0&sync_timestamp=1626935108770&other_urls=https%3A%2F%2Fregistry.nlark.com%2Frc-queue-anim%2Fdownload%2Frc-queue-anim-2.0.0.tgz#e78cf9c0f333cb41327e9ed603357f156d0ddce2"
+  integrity sha1-54z5wPMzy0Eyfp7WAzV/FW0N3OI=
+  dependencies:
+    "@babel/runtime" "^7.11.1"
+    tween-one "^1.0.52"
+
 rc-rate@~2.9.0:
   version "2.9.1"
   resolved "https://registry.nlark.com/rc-rate/download/rc-rate-2.9.1.tgz#e43cb95c4eb90a2c1e0b16ec6614d8c43530a731"
@@ -9703,6 +9750,11 @@ rc-virtual-list@^3.0.1, rc-virtual-list@^3.2.0:
     classnames "^2.2.6"
     rc-resize-observer "^1.0.0"
     rc-util "^5.0.7"
+
+react-animated-router@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.npm.taobao.org/react-animated-router/download/react-animated-router-0.2.4.tgz#5c2833e9f3ed79fb9df6436bcc2db2af17ecde32"
+  integrity sha1-XCgz6fPtefud9kNrzC2yrxfs3jI=
 
 react-app-polyfill@^2.0.0:
   version "2.0.0"
@@ -9881,6 +9933,17 @@ react-scripts@4.0.3:
     workbox-webpack-plugin "5.1.4"
   optionalDependencies:
     fsevents "^2.1.3"
+
+react-transition-group@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.nlark.com/react-transition-group/download/react-transition-group-2.3.0.tgz?cache=0&sync_timestamp=1622301299633&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-transition-group%2Fdownload%2Freact-transition-group-2.3.0.tgz#8dd1af58f6af284b19fd057f512e74f20438ad31"
+  integrity sha1-jdGvWPavKEsZ/QV/US508gQ4rTE=
+  dependencies:
+    chain-function "^1.0.0"
+    dom-helpers "^3.2.0"
+    loose-envify "^1.3.1"
+    prop-types "^15.5.8"
+    warning "^3.0.0"
 
 react@^17.0.2:
   version "17.0.2"
@@ -11116,6 +11179,11 @@ style-loader@1.3.0:
     loader-utils "^2.0.0"
     schema-utils "^2.7.0"
 
+style-utils@^0.3.0:
+  version "0.3.4"
+  resolved "https://registry.npm.taobao.org/style-utils/download/style-utils-0.3.4.tgz#ff407c360d3b5c1a0971279586e39ce27251064f"
+  integrity sha1-/0B8Ng07XBoJcSeVhuOc4nJRBk8=
+
 stylehacks@^4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/stylehacks/-/stylehacks-4.0.3.tgz#6718fcaf4d1e07d8a1318690881e8d96726a71d5"
@@ -11159,6 +11227,16 @@ svg-parser@^2.0.2:
   resolved "https://registry.yarnpkg.com/svg-parser/-/svg-parser-2.0.4.tgz#fdc2e29e13951736140b76cb122c8ee6630eb6b5"
   integrity sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==
 
+svg-path-properties@^0.2.1:
+  version "0.2.2"
+  resolved "https://registry.npm.taobao.org/svg-path-properties/download/svg-path-properties-0.2.2.tgz#b073d81be7292eae0e233ab8a83f58dc27113296"
+  integrity sha1-sHPYG+cpLq4OIzq4qD9Y3CcRMpY=
+
+svg-path-properties@^1.0.4:
+  version "1.0.11"
+  resolved "https://registry.npm.taobao.org/svg-path-properties/download/svg-path-properties-1.0.11.tgz#d804b77dea286ddd56bd182548b9c4f5980dcf83"
+  integrity sha1-2AS3feoobd1WvRglSLnE9ZgNz4M=
+
 svgo@^1.0.0, svgo@^1.2.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-1.3.2.tgz#b6dc511c063346c9e415b81e43401145b96d4167"
@@ -11177,6 +11255,11 @@ svgo@^1.0.0, svgo@^1.2.2:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+svgpath@^2.2.1:
+  version "2.3.1"
+  resolved "https://registry.npm.taobao.org/svgpath/download/svgpath-2.3.1.tgz#b102334bebd2244b4818460ba2ebad52716a0d43"
+  integrity sha1-sQIzS+vSJEtIGEYLouutUnFqDUM=
 
 symbol-tree@^3.2.4:
   version "3.2.4"
@@ -11391,6 +11474,13 @@ toidentifier@1.0.0:
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
 
+topojson-client@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.npm.taobao.org/topojson-client/download/topojson-client-3.1.0.tgz#22e8b1ed08a2b922feeb4af6f53b6ef09a467b99"
+  integrity sha1-Iuix7QiiuSL+60r29Ttu8JpGe5k=
+  dependencies:
+    commander "2"
+
 tough-cookie@^2.3.3, tough-cookie@~2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.5.0.tgz#cd9fb2a0aa1d5a12b473bd9fb96fa3dcff65ade2"
@@ -11463,6 +11553,23 @@ tunnel-agent@^0.6.0:
   integrity sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=
   dependencies:
     safe-buffer "^5.0.1"
+
+tween-functions@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.nlark.com/tween-functions/download/tween-functions-1.2.0.tgz#1ae3a50e7c60bb3def774eac707acbca73bbc3ff"
+  integrity sha1-GuOlDnxguz3vd06scHrLynO7w/8=
+
+tween-one@^1.0.52:
+  version "1.0.52"
+  resolved "https://registry.nlark.com/tween-one/download/tween-one-1.0.52.tgz#b44b5115c310df14bb19aed24a3eab49c79fe0a3"
+  integrity sha1-tEtRFcMQ3xS7Ga7SSj6rScef4KM=
+  dependencies:
+    "@babel/runtime" "^7.11.1"
+    flubber "^0.4.2"
+    raf "^3.4.1"
+    style-utils "^0.3.0"
+    svg-path-properties "^1.0.4"
+    tween-functions "^1.2.0"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
@@ -11805,6 +11912,13 @@ walker@^1.0.7, walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
+
+warning@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.nlark.com/warning/download/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
+  integrity sha1-MuU3fLVy3kqwR1O9+IIcAe1gW3w=
+  dependencies:
+    loose-envify "^1.0.0"
 
 warning@^4.0.1:
   version "4.0.3"

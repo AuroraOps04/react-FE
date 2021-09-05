@@ -1,0 +1,15 @@
+@import "~@/styles/variables.less";
+.app-wrapper{
+
+  height: calc(100% - @navbar-height);
+  position: relative;
+  transition: all .3s;
+  &.opened{
+    width: calc(100% - @aside-width);
+    margin-left: @aside-width;
+  }
+  &.closed{
+    width: calc(100% - @aside-close-width);
+    margin-left: @aside-close-width;
+  }
+}

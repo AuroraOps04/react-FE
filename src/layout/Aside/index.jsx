@@ -1,25 +1,33 @@
 import React from 'react';
 import {Menu} from 'antd';
 import {withRouter} from "react-router-dom";
-
-import styles from "./index.module.less";
+import {useSelector, useDispatch} from "react-redux";
 
 import {adminRouter} from "@/router";
+import {setDefaultOpenKeys, setDefaultSelectedKeys} from "@store/features/asideSlice";
+
+import "./index.less";
 
 const {SubMenu, Item} = Menu;
 
 function Aside(props) {
-    const handleClick = ({key}) => {
+    const dispatch = useDispatch()
+    const handleClick = ({key, keyPath}) => {
+        dispatch(setDefaultOpenKeys([keyPath[1]])) // 将SubMenu的Key放入store
+        dispatch(setDefaultSelectedKeys([key]))
         props.history.push(key)
     }
+    const { opened, defaultSelectedKeys, defaultOpenKeys } = useSelector(state => state.aside)
     return (
-        <div className={styles.AsideWrapper} >
+        <div className={[
+            'aside-wrapper',
+            opened ? 'opened' : 'closed'
+        ].join(" ")}  >
             <Menu
                 theme='dark'
                 onClick={handleClick}
-                style={
-                    {width: 200}
-                }
+                defaultSelectedKeys={defaultSelectedKeys}
+                defaultOpenKeys={defaultOpenKeys}
                 mode="inline"
             >
                 {adminRouter.map(route => {

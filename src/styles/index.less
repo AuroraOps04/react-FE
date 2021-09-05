@@ -3,3 +3,81 @@ body, #root{
   height: 100vh;
   position: relative;
 }
+
+.animated-router {
+  &-container {
+    /* 动画容器节点 这里需要自己写一下样式 建议一下*/
+    width: 100%;
+    height: 100%;
+  }
+
+  &-in-transition {
+    /* 页面动画中 */
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /** START: 自定义进出场动画 **/
+  &-forward-enter { /*进入的页面（进入前）*/
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  &-forward-enter-active { /*进入的页面（进入后）*/
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &-forward-exit { /*离开的页面 （离开前）*/
+    transform: translateX(0);
+    opacity: 0.3;
+  }
+
+  &-forward-exit-active { /*离开的页面 （离开后）*/
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  /*离场动画 （返回）*/
+
+  &-backward-enter { /*进入的页面（进入前）*/
+    transform: translate(-50px);
+    opacity: 0;
+  }
+
+  &-backward-enter-active { /*进入的页面（进入后）*/
+    transform: translate(0);
+    opacity: 1;
+  }
+
+  &-backward-exit { /*离开的页面（离开前）*/
+    transform: translate(0);
+    opacity: 0.3;
+  }
+
+  &-backward-exit-active { /*离开的页面（离开后）*/
+    transform: translate(30px);
+    opacity: 0;
+  }
+
+  /** END **/
+
+  &-forward-enter-active,
+  &-forward-exit-active,
+  &-backward-enter-active,
+  &-backward-exit-active {
+    /* 不同过渡阶段需要的过渡时间与缓动效果 */
+    transition: all 0.3s ease;
+  }
+
+  &-forward-exit,
+  &-backward-exit {
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+}

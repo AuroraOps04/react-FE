@@ -1,4 +1,4 @@
-import * as Constants from "./constans";
+import * as Constants from "./constants";
 
 
 export const setToken = token => {
